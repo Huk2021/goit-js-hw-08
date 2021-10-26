@@ -8,17 +8,36 @@ const refs = {
 
 const LOCALSTORAGE_KEY = "feedback-form-state";
 
+const storageValue = {
+    email: "",
+    message: "",
+};
 
-// function onEmailInput(evt) {
-//   const email = evt.target.value;
+// refs.form.addEventListener('submit', onFormSubmit);
+refs.input.addEventListener('input', throttle(onEmailInput, 500));
+refs.textarea.addEventListener('input', throttle(onMessageInput, 500));
 
-//     localStorage.setItem(LOCALSTORAGE_KEY, email);
+function onEmailInput(evt) {
+   storageValue.email = evt.target.value;
+
+    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(storageValue));
     
-// };
+};
 
-// function onMessageInput(evt) {
-//    const message = evt.target.value;
+function onMessageInput(evt) {
+    storageValue.message = evt.target.value;
 
-//     localStorage.setItem(LOCALSTORAGE_KEY, message);
+    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(storageValue));
   
-// };
+};
+
+
+
+
+
+
+
+
+
+
+
