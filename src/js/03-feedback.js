@@ -13,7 +13,7 @@ const storageValue = {
     message: "",
 };
 
-// refs.form.addEventListener('submit', onFormSubmit);
+refs.form.addEventListener('submit', onFormSubmit);
 refs.input.addEventListener('input', throttle(onEmailInput, 500));
 refs.textarea.addEventListener('input', throttle(onMessageInput, 500));
 
