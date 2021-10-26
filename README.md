@@ -69,7 +69,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 5. Сохраняй время воспроизведения в локальное хранилище. Пусть ключом для хранилища будет строка
    `"videoplayer-current-time"`.
 6. При перезагрузке страницы воспользуйся методом
-   [setCurrentTime()](https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror)
+   [setCurrentTime()] (https://github.com/vimeo/player.js/#setcurrenttimeseconds-number-promisenumber-rangeerrorerror)
    для того чтобы возобновить воспроизведение с сохраненной позиции.
 7. Добавь в проект бибилотеку [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) и
    сделай так, чтобы время воспроизведения обновлялось в хранилище не чаще чем раз в секунду.
