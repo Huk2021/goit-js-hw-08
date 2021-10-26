@@ -13,7 +13,7 @@ const storageValue = {
     message: "",
 };
 
-refs.form.addEventListener('submit', onFormSubmit);
+// refs.form.addEventListener('submit', onFormSubmit);
 refs.input.addEventListener('input', throttle(onEmailInput, 500));
 refs.textarea.addEventListener('input', throttle(onMessageInput, 500));
 
@@ -31,8 +31,17 @@ function onMessageInput(evt) {
   
 };
 
-
-
+function populateTextarea() {
+  const savedMessage = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
+    if (savedMessage) {
+        refs.input.value = savedMessage.email;
+        refs.textarea.value = savedMessage.message;
+    }
+}
+populateTextarea()
+    
+    
+    
 
 
 
